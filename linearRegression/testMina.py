@@ -40,12 +40,12 @@ def plotData(x, y):
     using plot(..., 'ro', ms=10), where `ms` refers to marker size. You 
     can also set the marker edge color using the `mec` property.
     """
-    fig = pyplot.figure()  # open a new figure
+    pyplot.figure()  # open a new figure
     
     # ====================== YOUR CODE HERE ======================= 
     pyplot.plot(x, y, 'bo', ms=10, mec='k')
-    pyplot.ylabel('Profitssssssssssssssssssssssssssss in $10,000')
-    pyplot.xlabel('Population of City in 101,0s')
+    pyplot.ylabel('Profit in $10,000')
+    pyplot.xlabel('Population of City in 1000,0s')
     # pyplot.show()
 
 def computeCost(X, y, theta):
@@ -291,7 +291,7 @@ def gradientDescentMulti(X, y, theta, alpha, num_iters):
         J_history.append(computeCostMulti(X, y, theta))
     
     return theta, J_history
-    
+
 def main():
     # Read comma separated data
     data = np.loadtxt(os.path.join('Data', 'ex1data1.txt'), delimiter=',')
